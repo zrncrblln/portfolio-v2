@@ -1,7 +1,9 @@
-# TODO: Update iSyn-App Information in Portfolio
+# Debugging Blank Page in Live Deployment
 
-- [x] Update role title to "Full Stack Developer & Documentation Writer"
-- [x] Update company name to "ASKI iSynergies, Inc."
-- [x] Replace main description with the iSyn-App overview
-- [x] Update key achievements section with the 5 key contributions
-- [x] Update tech stack badges to PHP, HTML, CSS, JavaScript, jQuery, Tailwind CSS, MySQL
+## Steps to Complete
+
+- [x] Add console logging in `src/main.tsx` to confirm script execution
+- [x] Add error boundary in `src/App.tsx` to catch and display rendering errors
+- [x] Rebuild the app using `npm run build`
+- [x] Redeploy using `npm run deploy`
+- [x] Test live site and check console for logs/errors
