@@ -1,11 +1,7 @@
-# Portfolio Update: Cybersecurity to UI/UX Designer
+# TODO: Update iSyn-App Information in Portfolio
 
-## Tasks
-
-- [x] Update Experience.tsx: Change "cybersecurity" to "UI/UX design" in education description
-- [x] Update About.tsx: Change "cybersecurity" to "UI/UX design" in bio and tags
-- [x] Update Hero.tsx: Modify description to focus on UI/UX design instead of security
-- [x] Update Skills.tsx: Replace "Security & DevOps" category with "UI/UX Design" and relevant skills
-- [x] Update Certifications.tsx: Adjust security categories to design where appropriate
-- [x] Update Projects.tsx: Add UI/UX aspects to project description
-- [x] Verify changes by running development server
+- [x] Update role title to "Full Stack Developer & Documentation Writer"
+- [x] Update company name to "ASKI iSynergies, Inc."
+- [x] Replace main description with the iSyn-App overview
+- [x] Update key achievements section with the 5 key contributions
+- [x] Update tech stack badges to PHP, HTML, CSS, JavaScript, jQuery, Tailwind CSS, MySQL

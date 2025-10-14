@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { useInView } from "motion/react";
 import { useRef, useState } from "react";
-import { Server, Layout, Database, Shield } from "lucide-react";
+import { Server, Layout, Database, Palette } from "lucide-react";
 import { Badge } from "./ui/badge";
 
 export function Skills() {
@@ -40,7 +40,7 @@ export function Skills() {
     {
       id: "design",
       title: "UI/UX Design",
-      icon: Shield,
+      icon: Palette,
       color: "#00D9FF",
       skills: [
         "Figma",
@@ -92,7 +92,7 @@ export function Skills() {
                 className="relative group cursor-pointer"
               >
                 <div
-                  className={`p-6 rounded-xl bg-[#1a1a2e] border transition-all duration-300 ${
+                  className={`p-6 rounded-xl bg-[#1a1a2e] border transition-all duration-200 min-h-[320px] ${
                     isActive
                       ? "border-opacity-100 shadow-2xl"
                       : "border-opacity-20 hover:border-opacity-50"

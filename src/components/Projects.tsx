@@ -28,11 +28,12 @@ export function Projects() {
 
   const techStack = [
     "PHP",
-    "Laravel",
+    "HTML5",
+    "CSS3",
     "MySQL",
     "JavaScript",
     "Bootstrap 5",
-    "REST API",
+    "Tailwind CSS",
   ];
 
   return (
@@ -142,7 +143,7 @@ export function Projects() {
               <div className="mb-6">
                 <h4 className="text-lg text-white mb-3">Solution</h4>
                 <p className="text-gray-300 leading-relaxed">
-                  Developed a full-stack web application using Laravel and MySQL
+                  Developed a full-stack web application using PHP and MySQL
                   that automates inventory tracking, sales reporting, and data
                   analytics. Implemented RESTful APIs for seamless data flow and
                   created an intuitive, user-centered dashboard for real-time
@@ -174,8 +175,8 @@ export function Projects() {
                     <div className="flex items-start gap-3">
                       <span className="text-[#00D9FF]">•</span>
                       <p>
-                        Built with Laravel MVC architecture for maintainable,
-                        scalable code
+                        Built with PHP architecture for maintainable, scalable
+                        code
                       </p>
                     </div>
                     <div className="flex items-start gap-3">
@@ -250,7 +251,7 @@ export function Projects() {
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <h3 className="text-2xl text-white mb-6 text-center">
-            More Projects Coming Soon
+            More Projects
           </h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[1, 2, 3].map((i) => (

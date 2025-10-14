@@ -60,9 +60,9 @@ export function Experience() {
                     </div>
                     <div>
                       <h3 className="text-xl text-white mb-1">
-                        Web Developer Intern
+                        Full Stack Developer & Documentation Writer
                       </h3>
-                      <p className="text-[#00D9FF]">AKSI iSynergies</p>
+                      <p className="text-[#00D9FF]">ASKI iSynergies, Inc.</p>
                     </div>
                   </div>
                   <div className="flex flex-col items-start sm:items-end gap-2 text-sm text-gray-400">
@@ -79,10 +79,12 @@ export function Experience() {
 
                 {/* Description */}
                 <p className="text-gray-300 mb-4">
-                  Contributed to full-stack development projects, focusing on
-                  building robust web applications and improving system
-                  performance. Collaborated with cross-functional teams to
-                  deliver user-centric solutions.
+                  The iSyn-app is an internal all-in-one enterprise system
+                  developed for ASKI iSynergies to automate and integrate
+                  various company operations. The platform combines inventory,
+                  sales, employee, and program management modules, allowing
+                  departments to manage and monitor workflows efficiently in one
+                  centralized system.
                 </p>
 
                 {/* Expandable Achievements */}
@@ -109,31 +111,55 @@ export function Experience() {
                 >
                   <div className="space-y-3 mb-6">
                     <div className="flex items-start gap-3 p-3 bg-[#0A1628] rounded-lg border border-[#00D9FF]/10">
-                      <span className="text-2xl">🎯</span>
+                      <span className="text-2xl">💻</span>
                       <div>
-                        <p className="text-white">Solution Advocacy</p>
+                        <p className="text-white">Full-Stack Development</p>
                         <p className="text-sm text-gray-400">
-                          Improved system reliability by 15% through proactive
-                          problem-solving
+                          Developed and maintained both frontend and backend
+                          modules using PHP, MySQL, HTML, CSS, JavaScript, and
+                          jQuery.
                         </p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3 p-3 bg-[#0A1628] rounded-lg border border-[#00FF88]/10">
-                      <span className="text-2xl">👥</span>
+                      <span className="text-2xl">🎨</span>
                       <div>
-                        <p className="text-white">User-Centric Design</p>
+                        <p className="text-white">Responsive UI Design</p>
                         <p className="text-sm text-gray-400">
-                          Enhanced usability by 20% through iterative design
-                          improvements
+                          Designed responsive user interfaces with Tailwind CSS,
+                          ensuring accessibility and consistent styling across
+                          pages.
                         </p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3 p-3 bg-[#0A1628] rounded-lg border border-[#8B5CF6]/10">
-                      <span className="text-2xl">🔧</span>
+                      <span className="text-2xl">🗄️</span>
                       <div>
-                        <p className="text-white">Technical Support</p>
+                        <p className="text-white">Database-Driven Features</p>
                         <p className="text-sm text-gray-400">
-                          Full lifecycle development from planning to deployment
+                          Implemented database-driven features for tracking
+                          inventory, employee data, and sales transactions.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3 p-3 bg-[#0A1628] rounded-lg border border-[#00D9FF]/10">
+                      <span className="text-2xl">📚</span>
+                      <div>
+                        <p className="text-white">Technical Documentation</p>
+                        <p className="text-sm text-gray-400">
+                          Authored technical documentation covering feature
+                          specifications, database schema, and user flow for
+                          future developers and system updates.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3 p-3 bg-[#0A1628] rounded-lg border border-[#00FF88]/10">
+                      <span className="text-2xl">🤝</span>
+                      <div>
+                        <p className="text-white">Team Collaboration</p>
+                        <p className="text-sm text-gray-400">
+                          Collaborated closely within a 4-member development
+                          team to test, debug, and deploy key system components.
                         </p>
                       </div>
                     </div>
@@ -142,12 +168,6 @@ export function Experience() {
 
                 {/* Tech Stack */}
                 <div className="flex flex-wrap gap-2">
-                  <Badge
-                    variant="outline"
-                    className="border-[#00FF88]/30 text-[#00FF88]"
-                  >
-                    CSS
-                  </Badge>
                   <Badge
                     variant="outline"
                     className="border-[#00D9FF]/30 text-[#00D9FF]"
@@ -162,9 +182,9 @@ export function Experience() {
                   </Badge>
                   <Badge
                     variant="outline"
-                    className="border-[#8B5CF6]/30 text-[#8B5CF6]"
+                    className="border-[#00FF88]/30 text-[#00FF88]"
                   >
-                    MySQL
+                    CSS
                   </Badge>
                   <Badge
                     variant="outline"
@@ -176,7 +196,19 @@ export function Experience() {
                     variant="outline"
                     className="border-[#8B5CF6]/30 text-[#8B5CF6]"
                   >
-                    Bootstrap
+                    jQuery
+                  </Badge>
+                  <Badge
+                    variant="outline"
+                    className="border-[#8B5CF6]/30 text-[#8B5CF6]"
+                  >
+                    Tailwind CSS
+                  </Badge>
+                  <Badge
+                    variant="outline"
+                    className="border-[#8B5CF6]/30 text-[#8B5CF6]"
+                  >
+                    MySQL
                   </Badge>
                 </div>
               </div>
