@@ -1,2 +1,16 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# production
+dist/
+build/
+
+# misc
+.DS_Store
+.env
+.vscode/
+.idea/
+*.local
