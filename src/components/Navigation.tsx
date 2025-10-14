@@ -49,7 +49,7 @@ export function Navigation() {
 
   const handleDownloadResume = () => {
     const link = document.createElement("a");
-    link.href = "/resume.pdf";
+    link.href = `${import.meta.env.BASE_URL}resume.pdf`;
     link.download = "Corbillon_Zoren_Resume.pdf";
     document.body.appendChild(link);
     link.click();
