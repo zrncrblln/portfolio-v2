@@ -1,11 +1,11 @@
-import { useEffect, useState } from 'react';
-import { motion } from 'motion/react';
-import { ChevronDown, Github, Linkedin, Mail } from 'lucide-react';
-import { Button } from './ui/button';
+import { useEffect, useState } from "react";
+import { motion } from "motion/react";
+import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
+import { Button } from "./ui/button";
 
 export function Hero() {
-  const [displayText, setDisplayText] = useState('');
-  const roles = ['Full-Stack Developer', 'Cybersecurity Enthusiast', 'Computer Engineer'];
+  const [displayText, setDisplayText] = useState("");
+  const roles = ["Full-Stack Developer", "UI/UX Designer", "Computer Engineer"];
   const [roleIndex, setRoleIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -34,15 +34,18 @@ export function Hero() {
   }, [charIndex, isDeleting, roleIndex]);
 
   const techStack = [
-    { name: 'PHP', icon: '<?>' },
-    { name: 'Laravel', icon: 'L' },
-    { name: 'MySQL', icon: 'DB' },
-    { name: 'JavaScript', icon: 'JS' },
-    { name: 'CEH', icon: '🔒' },
+    { name: "PHP", icon: "<?>" },
+    { name: "Laravel", icon: "L" },
+    { name: "MySQL", icon: "DB" },
+    { name: "JavaScript", icon: "JS" },
+    { name: "CEH", icon: "🔒" },
   ];
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section
+      id="hero"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
       {/* Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#0A1628] via-[#1a1a2e] to-[#8B5CF6]/20" />
 
@@ -70,7 +73,7 @@ export function Hero() {
             transition={{ delay: 0.3, duration: 0.5 }}
             className="text-5xl sm:text-6xl md:text-7xl text-white tracking-tight"
             style={{
-              textShadow: '0 0 40px rgba(0, 217, 255, 0.3)',
+              textShadow: "0 0 40px rgba(0, 217, 255, 0.3)",
             }}
           >
             Zoren Corbillon
@@ -96,7 +99,8 @@ export function Hero() {
             transition={{ delay: 0.7 }}
             className="text-gray-400 max-w-2xl mx-auto text-lg"
           >
-            Building secure, scalable solutions with a passion for solving complex technical problems
+            Creating intuitive, user-centered designs with a passion for solving
+            complex user experience challenges
           </motion.p>
 
           {/* CTA Buttons */}
@@ -109,7 +113,11 @@ export function Hero() {
             <Button
               size="lg"
               className="bg-gradient-to-r from-[#00D9FF] to-[#8B5CF6] hover:opacity-90 text-white border-0"
-              onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() =>
+                document
+                  .getElementById("projects")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
             >
               View My Work
             </Button>
@@ -117,7 +125,11 @@ export function Hero() {
               size="lg"
               variant="outline"
               className="border-[#00D9FF] text-[#00D9FF] hover:bg-[#00D9FF] hover:text-[#0A1628]"
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() =>
+                document
+                  .getElementById("contact")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
             >
               Let's Connect
             </Button>
@@ -157,7 +169,7 @@ export function Hero() {
             className="flex items-center justify-center gap-4 pt-8"
           >
             <a
-              href="https://github.com/zorencorbillon"
+              href="https://github.com/zrncrblln"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full bg-[#1a1a2e] border border-[#00D9FF]/20 flex items-center justify-center hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition-all"
@@ -165,7 +177,7 @@ export function Hero() {
               <Github className="w-5 h-5 text-[#00D9FF]" />
             </a>
             <a
-              href="https://linkedin.com/in/zorencorbillon"
+              href="https://www.linkedin.com/in/zoren-corbillon-96719a138/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full bg-[#1a1a2e] border border-[#00D9FF]/20 flex items-center justify-center hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition-all"

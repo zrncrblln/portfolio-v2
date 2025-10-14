@@ -1,16 +1,29 @@
-import { motion } from 'motion/react';
-import { useInView } from 'motion/react';
-import { useRef, useState } from 'react';
-import { Mail, Phone, MapPin, Send, Check, Copy, Github, Linkedin } from 'lucide-react';
-import { Button } from './ui/button';
-import { Input } from './ui/input';
-import { Textarea } from './ui/textarea';
-import { toast } from 'sonner@2.0.3';
+import { motion } from "motion/react";
+import { useInView } from "motion/react";
+import { useRef, useState } from "react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+  Check,
+  Copy,
+  Github,
+  Linkedin,
+} from "lucide-react";
+import { Button } from "./ui/button";
+import { Input } from "./ui/input";
+import { Textarea } from "./ui/textarea";
+import { toast } from "sonner";
 
 export function Contact() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [emailCopied, setEmailCopied] = useState(false);
 
@@ -21,40 +34,42 @@ export function Contact() {
     // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 1500));
 
-    toast.success('Message sent successfully! I\'ll get back to you soon.');
-    setFormData({ name: '', email: '', message: '' });
+    toast.success("Message sent successfully! I'll get back to you soon.");
+    setFormData({ name: "", email: "", message: "" });
     setIsSubmitting(false);
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const copyEmail = () => {
-    navigator.clipboard.writeText('zorencorbillon@gmail.com');
+    navigator.clipboard.writeText("zorencorbillon@gmail.com");
     setEmailCopied(true);
-    toast.success('Email copied to clipboard!');
+    toast.success("Email copied to clipboard!");
     setTimeout(() => setEmailCopied(false), 2000);
   };
 
   const socialLinks = [
     {
-      name: 'GitHub',
+      name: "GitHub",
       icon: Github,
-      url: 'https://github.com/zorencorbillon',
-      color: '#00D9FF',
+      url: "https://github.com/zrncrblln",
+      color: "#00D9FF",
     },
     {
-      name: 'LinkedIn',
+      name: "LinkedIn",
       icon: Linkedin,
-      url: 'https://linkedin.com/in/zorencorbillon',
-      color: '#00D9FF',
+      url: "https://www.linkedin.com/in/zoren-corbillon-96719a138/",
+      color: "#00D9FF",
     },
     {
-      name: 'Email',
+      name: "Email",
       icon: Mail,
-      url: 'mailto:zorencorbillon@gmail.com',
-      color: '#00FF88',
+      url: "mailto:zorencorbillon@gmail.com",
+      color: "#00FF88",
     },
   ];
 
@@ -83,20 +98,26 @@ export function Contact() {
         ))}
       </div>
 
-      <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div
+        ref={ref}
+        className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+      >
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl text-white mb-4">Let's Connect</h2>
+          <h2 className="text-4xl sm:text-5xl text-white mb-4">
+            Let's Connect
+          </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-[#00D9FF] to-[#8B5CF6] mx-auto mb-6" />
           <p className="text-2xl sm:text-3xl text-[#00D9FF] mb-4">
             Ready to Build Something Amazing?
           </p>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Let's collaborate on your next project. I'm always open to discussing new opportunities and ideas.
+            Let's collaborate on your next project. I'm always open to
+            discussing new opportunities and ideas.
           </p>
         </motion.div>
 
@@ -152,7 +173,11 @@ export function Contact() {
                   <>
                     <motion.div
                       animate={{ rotate: 360 }}
-                      transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
+                      transition={{
+                        duration: 1,
+                        repeat: Infinity,
+                        ease: "linear",
+                      }}
                       className="mr-2"
                     >
                       ⚡
@@ -246,7 +271,11 @@ export function Contact() {
                       target="_blank"
                       rel="noopener noreferrer"
                       initial={{ opacity: 0, scale: 0.8 }}
-                      animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+                      animate={
+                        isInView
+                          ? { opacity: 1, scale: 1 }
+                          : { opacity: 0, scale: 0.8 }
+                      }
                       transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
                       whileHover={{ scale: 1.1, rotate: 5 }}
                       className="flex flex-col items-center gap-2 p-4 rounded-xl bg-[#1a1a2e] border border-[#00D9FF]/20 hover:border-[#00D9FF] hover:shadow-lg hover:shadow-[#00D9FF]/30 transition-all group"

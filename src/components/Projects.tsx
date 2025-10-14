@@ -1,9 +1,9 @@
-import { motion } from 'motion/react';
-import { useInView } from 'motion/react';
-import { useRef, useState } from 'react';
-import { ExternalLink, Code, Zap, TrendingUp, Target } from 'lucide-react';
-import { Badge } from './ui/badge';
-import { Button } from './ui/button';
+import { motion } from "motion/react";
+import { useInView } from "motion/react";
+import { useRef, useState } from "react";
+import { ExternalLink, Code, Zap, TrendingUp, Target } from "lucide-react";
+import { Badge } from "./ui/badge";
+import { Button } from "./ui/button";
 
 export function Projects() {
   const ref = useRef(null);
@@ -11,16 +11,36 @@ export function Projects() {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const metrics = [
-    { icon: Zap, value: '30%', label: 'Faster Data Processing', color: '#00D9FF' },
-    { icon: TrendingUp, value: '25%', label: 'Feature Adoption', color: '#00FF88' },
-    { icon: Target, value: '99.9%', label: 'Data Accuracy', color: '#8B5CF6' },
+    {
+      icon: Zap,
+      value: "30%",
+      label: "Faster Data Processing",
+      color: "#00D9FF",
+    },
+    {
+      icon: TrendingUp,
+      value: "25%",
+      label: "Feature Adoption",
+      color: "#00FF88",
+    },
+    { icon: Target, value: "99.9%", label: "Data Accuracy", color: "#8B5CF6" },
   ];
 
-  const techStack = ['PHP', 'Laravel', 'MySQL', 'JavaScript', 'Bootstrap 5', 'REST API'];
+  const techStack = [
+    "PHP",
+    "Laravel",
+    "MySQL",
+    "JavaScript",
+    "Bootstrap 5",
+    "REST API",
+  ];
 
   return (
     <section id="projects" className="relative py-20 sm:py-32">
-      <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div
+        ref={ref}
+        className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+      >
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -30,7 +50,8 @@ export function Projects() {
           <h2 className="text-4xl sm:text-5xl text-white mb-4">The Showcase</h2>
           <div className="w-20 h-1 bg-gradient-to-r from-[#00D9FF] to-[#8B5CF6] mx-auto mb-6" />
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Real-world projects that demonstrate technical excellence and problem-solving capabilities
+            Real-world projects that demonstrate technical excellence and
+            problem-solving capabilities
           </p>
         </motion.div>
 
@@ -49,7 +70,7 @@ export function Projects() {
                   className="absolute inset-0"
                   style={{
                     backgroundImage: `linear-gradient(#00D9FF 1px, transparent 1px), linear-gradient(90deg, #00D9FF 1px, transparent 1px)`,
-                    backgroundSize: '40px 40px',
+                    backgroundSize: "40px 40px",
                   }}
                 />
               </div>
@@ -59,7 +80,7 @@ export function Projects() {
                 </div>
                 <h3 className="text-2xl text-white">iSyn-app Platform</h3>
               </div>
-              
+
               {/* Featured Badge */}
               <div className="absolute top-4 right-4">
                 <Badge className="bg-gradient-to-r from-[#00D9FF] to-[#8B5CF6] text-white border-0">
@@ -89,9 +110,15 @@ export function Projects() {
                       className="p-4 rounded-lg bg-[#0A1628] border border-[#00D9FF]/10 text-center"
                     >
                       <div className="flex items-center justify-center mb-2">
-                        <Icon className="w-5 h-5" style={{ color: metric.color }} />
+                        <Icon
+                          className="w-5 h-5"
+                          style={{ color: metric.color }}
+                        />
                       </div>
-                      <div className="text-xl mb-1" style={{ color: metric.color }}>
+                      <div
+                        className="text-xl mb-1"
+                        style={{ color: metric.color }}
+                      >
                         {metric.value}
                       </div>
                       <p className="text-xs text-gray-400">{metric.label}</p>
@@ -104,9 +131,10 @@ export function Projects() {
               <div className="mb-6">
                 <h4 className="text-lg text-white mb-3">Problem Statement</h4>
                 <p className="text-gray-300 leading-relaxed">
-                  AKSI iSynergies needed a comprehensive platform to streamline inventory management, 
-                  track sales operations, and provide real-time data insights. The existing manual 
-                  processes were time-consuming and prone to errors.
+                  AKSI iSynergies needed a comprehensive platform to streamline
+                  inventory management, track sales operations, and provide
+                  real-time data insights. The existing manual processes were
+                  time-consuming and prone to errors.
                 </p>
               </div>
 
@@ -114,9 +142,11 @@ export function Projects() {
               <div className="mb-6">
                 <h4 className="text-lg text-white mb-3">Solution</h4>
                 <p className="text-gray-300 leading-relaxed">
-                  Developed a full-stack web application using Laravel and MySQL that automates 
-                  inventory tracking, sales reporting, and data analytics. Implemented RESTful APIs 
-                  for seamless data flow and created an intuitive dashboard for real-time monitoring.
+                  Developed a full-stack web application using Laravel and MySQL
+                  that automates inventory tracking, sales reporting, and data
+                  analytics. Implemented RESTful APIs for seamless data flow and
+                  created an intuitive, user-centered dashboard for real-time
+                  monitoring with modern UI/UX design principles.
                 </p>
               </div>
 
@@ -127,34 +157,54 @@ export function Projects() {
                   className="flex items-center justify-between w-full text-lg text-white mb-3 hover:text-[#00D9FF] transition-colors"
                 >
                   <span>Technical Implementation</span>
-                  <span className="text-[#00D9FF]">{isExpanded ? '−' : '+'}</span>
+                  <span className="text-[#00D9FF]">
+                    {isExpanded ? "−" : "+"}
+                  </span>
                 </button>
                 <motion.div
                   initial={false}
-                  animate={{ height: isExpanded ? 'auto' : 0, opacity: isExpanded ? 1 : 0 }}
+                  animate={{
+                    height: isExpanded ? "auto" : 0,
+                    opacity: isExpanded ? 1 : 0,
+                  }}
                   transition={{ duration: 0.3 }}
                   className="overflow-hidden"
                 >
                   <div className="space-y-3 text-gray-300">
                     <div className="flex items-start gap-3">
                       <span className="text-[#00D9FF]">•</span>
-                      <p>Built with Laravel MVC architecture for maintainable, scalable code</p>
+                      <p>
+                        Built with Laravel MVC architecture for maintainable,
+                        scalable code
+                      </p>
                     </div>
                     <div className="flex items-start gap-3">
                       <span className="text-[#00D9FF]">•</span>
-                      <p>Optimized MySQL queries reducing data retrieval time by 30%</p>
+                      <p>
+                        Optimized MySQL queries reducing data retrieval time by
+                        30%
+                      </p>
                     </div>
                     <div className="flex items-start gap-3">
                       <span className="text-[#00D9FF]">•</span>
-                      <p>Implemented responsive UI with Bootstrap 5 for cross-device compatibility</p>
+                      <p>
+                        Implemented responsive UI with Bootstrap 5 for
+                        cross-device compatibility and enhanced user experience
+                      </p>
                     </div>
                     <div className="flex items-start gap-3">
                       <span className="text-[#00D9FF]">•</span>
-                      <p>Created automated backup system ensuring 99.9% data accuracy</p>
+                      <p>
+                        Created automated backup system ensuring 99.9% data
+                        accuracy
+                      </p>
                     </div>
                     <div className="flex items-start gap-3">
                       <span className="text-[#00D9FF]">•</span>
-                      <p>Applied security best practices including input validation and SQL injection prevention</p>
+                      <p>
+                        Applied security best practices including input
+                        validation and SQL injection prevention
+                      </p>
                     </div>
                   </div>
                 </motion.div>
@@ -162,10 +212,16 @@ export function Projects() {
 
               {/* Tech Stack */}
               <div className="mb-6">
-                <h4 className="text-sm text-gray-400 mb-3">Technologies Used</h4>
+                <h4 className="text-sm text-gray-400 mb-3">
+                  Technologies Used
+                </h4>
                 <div className="flex flex-wrap gap-2">
                   {techStack.map((tech) => (
-                    <Badge key={tech} variant="outline" className="border-[#00D9FF]/30 text-[#00D9FF]">
+                    <Badge
+                      key={tech}
+                      variant="outline"
+                      className="border-[#00D9FF]/30 text-[#00D9FF]"
+                    >
                       {tech}
                     </Badge>
                   ))}
@@ -193,7 +249,9 @@ export function Projects() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <h3 className="text-2xl text-white mb-6 text-center">More Projects Coming Soon</h3>
+          <h3 className="text-2xl text-white mb-6 text-center">
+            More Projects Coming Soon
+          </h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[1, 2, 3].map((i) => (
               <div

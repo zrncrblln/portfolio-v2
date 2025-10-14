@@ -1,8 +1,17 @@
-import { motion } from 'motion/react';
-import { useInView } from 'motion/react';
-import { useRef, useState } from 'react';
-import { Award, Shield, Database, Brain, Code, Users, Lightbulb, Briefcase } from 'lucide-react';
-import { Badge } from './ui/badge';
+import { motion } from "motion/react";
+import { useInView } from "motion/react";
+import { useRef, useState } from "react";
+import {
+  Award,
+  Shield,
+  Database,
+  Brain,
+  Code,
+  Users,
+  Lightbulb,
+  Briefcase,
+} from "lucide-react";
+import { Badge } from "./ui/badge";
 
 export function Certifications() {
   const ref = useRef(null);
@@ -11,94 +20,105 @@ export function Certifications() {
 
   const certifications = [
     {
-      title: 'Certified Ethical Hacker (CEH)',
-      organization: 'Cisco',
-      date: '2024',
+      title: "UI/UX Design Fundamentals",
+      organization: "Google",
+      date: "2024",
       icon: Shield,
       featured: true,
-      color: '#00D9FF',
-      category: 'Security',
+      color: "#00D9FF",
+      category: "Design",
     },
     {
-      title: 'Certified Data Center Technician (CDCT)',
-      organization: 'Cisco',
-      date: '2024',
+      title: "Certified Data Center Technician (CDCT)",
+      organization: "Cisco",
+      date: "2024",
       icon: Database,
       featured: false,
-      color: '#8B5CF6',
-      category: 'Infrastructure',
+      color: "#8B5CF6",
+      category: "Infrastructure",
     },
     {
-      title: 'Data Analytics Essentials',
-      organization: 'Cisco',
-      date: '2024',
+      title: "Data Analytics Essentials",
+      organization: "Cisco",
+      date: "2024",
       icon: Brain,
       featured: false,
-      color: '#00FF88',
-      category: 'Analytics',
+      color: "#00FF88",
+      category: "Analytics",
     },
     {
-      title: 'Introduction to Data Science',
-      organization: 'Cisco',
-      date: '2024',
+      title: "Introduction to Data Science",
+      organization: "Cisco",
+      date: "2024",
       icon: Brain,
       featured: false,
-      color: '#00FF88',
-      category: 'Data Science',
+      color: "#00FF88",
+      category: "Data Science",
     },
     {
-      title: 'Python Essentials 1',
-      organization: 'Cisco',
-      date: '2024',
+      title: "Python Essentials 1",
+      organization: "Cisco",
+      date: "2024",
       icon: Code,
       featured: false,
-      color: '#00D9FF',
-      category: 'Programming',
+      color: "#00D9FF",
+      category: "Programming",
     },
     {
-      title: 'Introduction to Cybersecurity',
-      organization: 'Cisco',
-      date: '2024',
+      title: "Advanced Prototyping",
+      organization: "Coursera",
+      date: "2024",
       icon: Shield,
       featured: false,
-      color: '#00D9FF',
-      category: 'Security',
+      color: "#00D9FF",
+      category: "Design",
     },
     {
-      title: 'Start-up Mindset',
-      organization: 'Wadhwani Foundation',
-      date: '2024',
+      title: "Start-up Mindset",
+      organization: "Wadhwani Foundation",
+      date: "2024",
       icon: Lightbulb,
       featured: false,
-      color: '#8B5CF6',
-      category: 'Business',
+      color: "#8B5CF6",
+      category: "Business",
     },
     {
-      title: 'Professionalism',
-      organization: 'Wadhwani Foundation',
-      date: '2024',
+      title: "Professionalism",
+      organization: "Wadhwani Foundation",
+      date: "2024",
       icon: Briefcase,
       featured: false,
-      color: '#8B5CF6',
-      category: 'Professional Development',
+      color: "#8B5CF6",
+      category: "Professional Development",
     },
   ];
 
-  const visibleCertifications = showAll ? certifications : certifications.slice(0, 6);
+  const visibleCertifications = showAll
+    ? certifications
+    : certifications.slice(0, 6);
 
   return (
-    <section id="certifications" className="relative py-20 sm:py-32 bg-[#0A1628]/50">
-      <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section
+      id="certifications"
+      className="relative py-20 sm:py-32 bg-[#0A1628]/50"
+    >
+      <div
+        ref={ref}
+        className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+      >
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl text-white mb-4">The Credentials</h2>
+          <h2 className="text-4xl sm:text-5xl text-white mb-4">
+            The Credentials
+          </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-[#00D9FF] to-[#8B5CF6] mx-auto mb-6" />
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Industry-recognized certifications demonstrating commitment to continuous learning and expertise
+            Industry-recognized certifications demonstrating commitment to
+            continuous learning and expertise
           </p>
         </motion.div>
 
@@ -110,7 +130,11 @@ export function Certifications() {
               <motion.div
                 key={cert.title}
                 initial={{ opacity: 0, scale: 0.9 }}
-                animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+                animate={
+                  isInView
+                    ? { opacity: 1, scale: 1 }
+                    : { opacity: 0, scale: 0.9 }
+                }
                 transition={{ duration: 0.5, delay: index * 0.05 }}
                 whileHover={{ scale: 1.05, y: -5 }}
                 className="relative group"
@@ -118,8 +142,8 @@ export function Certifications() {
                 <div
                   className={`h-full p-6 rounded-xl bg-[#1a1a2e] border transition-all duration-300 ${
                     cert.featured
-                      ? 'border-[#00D9FF]/50 shadow-lg shadow-[#00D9FF]/20'
-                      : 'border-[#00D9FF]/10 hover:border-[#00D9FF]/30'
+                      ? "border-[#00D9FF]/50 shadow-lg shadow-[#00D9FF]/20"
+                      : "border-[#00D9FF]/10 hover:border-[#00D9FF]/30"
                   }`}
                 >
                   {/* Featured Badge */}
@@ -136,18 +160,22 @@ export function Certifications() {
                     <div
                       className={`w-16 h-16 rounded-xl flex items-center justify-center transition-all duration-300 ${
                         cert.featured
-                          ? 'bg-gradient-to-br from-[#00D9FF]/20 to-[#8B5CF6]/20'
-                          : 'bg-[#0A1628]'
+                          ? "bg-gradient-to-br from-[#00D9FF]/20 to-[#8B5CF6]/20"
+                          : "bg-[#0A1628]"
                       } group-hover:scale-110`}
                       style={{
-                        boxShadow: cert.featured ? `0 0 20px ${cert.color}30` : 'none',
+                        boxShadow: cert.featured
+                          ? `0 0 20px ${cert.color}30`
+                          : "none",
                       }}
                     >
                       <Icon
                         className="w-8 h-8 transition-all duration-300"
                         style={{
                           color: cert.color,
-                          filter: cert.featured ? 'drop-shadow(0 0 8px currentColor)' : 'none',
+                          filter: cert.featured
+                            ? "drop-shadow(0 0 8px currentColor)"
+                            : "none",
                         }}
                       />
                     </div>
@@ -158,14 +186,14 @@ export function Certifications() {
                     <h3
                       className="text-white line-clamp-2 min-h-[3rem]"
                       style={{
-                        color: cert.featured ? cert.color : '#E2E8F0',
+                        color: cert.featured ? cert.color : "#E2E8F0",
                       }}
                     >
                       {cert.title}
                     </h3>
                     <p className="text-gray-400 text-sm">{cert.organization}</p>
                     <p className="text-gray-500 text-xs">{cert.date}</p>
-                    
+
                     {/* Category Badge */}
                     <div className="pt-2">
                       <Badge
@@ -206,7 +234,9 @@ export function Certifications() {
               onClick={() => setShowAll(!showAll)}
               className="px-6 py-3 rounded-lg bg-[#1a1a2e] border border-[#00D9FF]/30 text-[#00D9FF] hover:bg-[#00D9FF]/10 hover:border-[#00D9FF] transition-all"
             >
-              {showAll ? 'Show Less' : `View All ${certifications.length} Certifications`}
+              {showAll
+                ? "Show Less"
+                : `View All ${certifications.length} Certifications`}
             </button>
           </motion.div>
         )}
@@ -219,7 +249,9 @@ export function Certifications() {
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6"
         >
           <div className="text-center p-6 rounded-xl bg-[#1a1a2e] border border-[#00D9FF]/10">
-            <div className="text-3xl text-[#00D9FF] mb-2">{certifications.length}+</div>
+            <div className="text-3xl text-[#00D9FF] mb-2">
+              {certifications.length}+
+            </div>
             <p className="text-gray-400 text-sm">Total Certifications</p>
           </div>
           <div className="text-center p-6 rounded-xl bg-[#1a1a2e] border border-[#00FF88]/10">

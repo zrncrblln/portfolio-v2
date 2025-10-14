@@ -1,8 +1,8 @@
-import { motion } from 'motion/react';
-import { useInView } from 'motion/react';
-import { useRef, useState } from 'react';
-import { Server, Layout, Database, Shield } from 'lucide-react';
-import { Badge } from './ui/badge';
+import { motion } from "motion/react";
+import { useInView } from "motion/react";
+import { useRef, useState } from "react";
+import { Server, Layout, Database, Shield } from "lucide-react";
+import { Badge } from "./ui/badge";
 
 export function Skills() {
   const ref = useRef(null);
@@ -11,38 +11,54 @@ export function Skills() {
 
   const categories = [
     {
-      id: 'backend',
-      title: 'Backend Development',
+      id: "backend",
+      title: "Backend Development",
       icon: Server,
-      color: '#00D9FF',
-      skills: ['PHP', 'Laravel', 'Node.js', 'REST API', 'Apache'],
+      color: "#00D9FF",
+      skills: ["PHP", "Laravel", "Node.js", "REST API", "Apache"],
     },
     {
-      id: 'frontend',
-      title: 'Frontend & Design',
+      id: "frontend",
+      title: "Frontend & Design",
       icon: Layout,
-      color: '#00FF88',
-      skills: ['JavaScript (ES6+)', 'HTML5', 'CSS3', 'Bootstrap 5', 'Responsive Design'],
+      color: "#00FF88",
+      skills: [
+        "JavaScript (ES6+)",
+        "HTML5",
+        "CSS3",
+        "Bootstrap 5",
+        "Responsive Design",
+      ],
     },
     {
-      id: 'database',
-      title: 'Database & Analytics',
+      id: "database",
+      title: "Database & Analytics",
       icon: Database,
-      color: '#8B5CF6',
-      skills: ['MySQL', 'SQL', 'Data Analytics', 'Excel', 'Tableau'],
+      color: "#8B5CF6",
+      skills: ["MySQL", "SQL", "Data Analytics", "Excel", "Tableau"],
     },
     {
-      id: 'security',
-      title: 'Security & DevOps',
+      id: "design",
+      title: "UI/UX Design",
       icon: Shield,
-      color: '#00D9FF',
-      skills: ['CEH', 'Vulnerability Assessment', 'Git/GitHub', 'Security Best Practices', 'Network Security'],
+      color: "#00D9FF",
+      skills: [
+        "Figma",
+        "Photoshop",
+        "User Research",
+        "Wireframing",
+        "Prototyping",
+        "Design Systems",
+      ],
     },
   ];
 
   return (
     <section id="skills" className="relative py-20 sm:py-32">
-      <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div
+        ref={ref}
+        className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+      >
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -52,7 +68,8 @@ export function Skills() {
           <h2 className="text-4xl sm:text-5xl text-white mb-4">The Arsenal</h2>
           <div className="w-20 h-1 bg-gradient-to-r from-[#00D9FF] to-[#8B5CF6] mx-auto mb-6" />
           <p className="text-gray-400 max-w-2xl mx-auto">
-            A comprehensive toolkit built through education, certification, and hands-on experience
+            A comprehensive toolkit built through education, certification, and
+            hands-on experience
           </p>
         </motion.div>
 
@@ -65,7 +82,9 @@ export function Skills() {
               <motion.div
                 key={category.id}
                 initial={{ opacity: 0, y: 30 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                animate={
+                  isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
+                }
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ scale: 1.02 }}
                 onHoverStart={() => setActiveCategory(category.id)}
@@ -75,12 +94,14 @@ export function Skills() {
                 <div
                   className={`p-6 rounded-xl bg-[#1a1a2e] border transition-all duration-300 ${
                     isActive
-                      ? 'border-opacity-100 shadow-2xl'
-                      : 'border-opacity-20 hover:border-opacity-50'
+                      ? "border-opacity-100 shadow-2xl"
+                      : "border-opacity-20 hover:border-opacity-50"
                   }`}
                   style={{
                     borderColor: category.color,
-                    boxShadow: isActive ? `0 10px 40px ${category.color}40` : 'none',
+                    boxShadow: isActive
+                      ? `0 10px 40px ${category.color}40`
+                      : "none",
                   }}
                 >
                   {/* Icon */}
@@ -88,14 +109,18 @@ export function Skills() {
                     <div
                       className="w-16 h-16 rounded-xl flex items-center justify-center transition-all duration-300"
                       style={{
-                        backgroundColor: isActive ? `${category.color}30` : `${category.color}10`,
+                        backgroundColor: isActive
+                          ? `${category.color}30`
+                          : `${category.color}10`,
                       }}
                     >
                       <Icon
                         className="w-8 h-8 transition-all duration-300"
                         style={{
                           color: category.color,
-                          filter: isActive ? 'drop-shadow(0 0 8px currentColor)' : 'none',
+                          filter: isActive
+                            ? "drop-shadow(0 0 8px currentColor)"
+                            : "none",
                         }}
                       />
                     </div>
@@ -104,7 +129,7 @@ export function Skills() {
                   {/* Title */}
                   <h3
                     className="text-center mb-4 transition-colors duration-300"
-                    style={{ color: isActive ? category.color : '#E2E8F0' }}
+                    style={{ color: isActive ? category.color : "#E2E8F0" }}
                   >
                     {category.title}
                   </h3>
@@ -126,9 +151,13 @@ export function Skills() {
                           variant="outline"
                           className="text-xs transition-all duration-300"
                           style={{
-                            borderColor: isActive ? category.color : `${category.color}40`,
-                            color: isActive ? category.color : '#9CA3AF',
-                            backgroundColor: isActive ? `${category.color}10` : 'transparent',
+                            borderColor: isActive
+                              ? category.color
+                              : `${category.color}40`,
+                            color: isActive ? category.color : "#9CA3AF",
+                            backgroundColor: isActive
+                              ? `${category.color}10`
+                              : "transparent",
                           }}
                         >
                           {skill}
