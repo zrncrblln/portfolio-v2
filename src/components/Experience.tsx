@@ -237,7 +237,7 @@ export function Experience() {
                     <p className="text-[#00FF88]">
                       Wesleyan University-Philippines
                     </p>
-                    <p className="text-sm text-gray-400 mt-2">202</p>
+                    <p className="text-sm text-gray-400 mt-2">2021-2025</p>
                   </div>
                 </div>
                 <p className="text-gray-300">

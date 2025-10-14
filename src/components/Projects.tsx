@@ -1,7 +1,16 @@
 import { motion } from "motion/react";
 import { useInView } from "motion/react";
 import { useRef, useState } from "react";
-import { ExternalLink, Code, Zap, TrendingUp, Target } from "lucide-react";
+import {
+  ExternalLink,
+  Code,
+  Zap,
+  TrendingUp,
+  Target,
+  GraduationCap,
+  Film,
+  Shield,
+} from "lucide-react";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 
@@ -244,7 +253,7 @@ export function Projects() {
           </div>
         </motion.div>
 
-        {/* Additional Projects Placeholder */}
+        {/* Additional Projects */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
@@ -254,16 +263,94 @@ export function Projects() {
             More Projects
           </h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[1, 2, 3].map((i) => (
+            {[
+              {
+                id: 1,
+                title: "Automate - School Management System",
+                description:
+                  "A robust web-based system for managing students, teachers, and academic records with role-based access.",
+                icon: GraduationCap,
+                techStack: [
+                  "PHP",
+                  "MySQL",
+                  "HTML5",
+                  "CSS3",
+                  "JavaScript",
+                  "Bootstrap 5",
+                ],
+                link: "https://github.com/zrncrblln/automate",
+              },
+              {
+                id: 2,
+                title: "Moviez - Netflix-Inspired Streaming Platform",
+                description:
+                  "A modern streaming platform interface inspired by Netflix, built with React, TypeScript, and Vite.",
+                icon: Film,
+                techStack: [
+                  "React",
+                  "TypeScript",
+                  "Vite",
+                  "React Router",
+                  "CSS3",
+                  "TMDB API",
+                ],
+                link: "https://github.com/zrncrblln/film-library",
+              },
+              {
+                id: 3,
+                title: "Cybersecurity Awareness Landing Page",
+                description:
+                  "A landing page designed to raise awareness about cybersecurity best practices, built with React.",
+                icon: Shield,
+                techStack: [
+                  "React",
+                  "TypeScript",
+                  "Vite",
+                  "React Router",
+                  "CSS3",
+                  "Figma",
+                ],
+                link: "https://zrncrblln.github.io/cybersecurity-awareness-landing-page/",
+              },
+            ].map((project) => (
               <div
-                key={i}
-                className="aspect-video rounded-xl bg-[#1a1a2e] border border-[#00D9FF]/10 flex items-center justify-center hover:border-[#00D9FF]/30 transition-all group cursor-pointer"
+                key={project.id}
+                className="rounded-xl bg-[#1a1a2e] border border-[#00D9FF]/10 hover:border-[#00D9FF]/30 transition-all group cursor-pointer overflow-hidden"
               >
-                <div className="text-center">
-                  <Code className="w-12 h-12 text-gray-600 mx-auto mb-3 group-hover:text-[#00D9FF] transition-colors" />
-                  <p className="text-gray-500 group-hover:text-gray-400 transition-colors">
-                    Project {i}
-                  </p>
+                <div className="aspect-video flex items-center justify-center p-6">
+                  <div className="text-center">
+                    <project.icon className="w-12 h-12 text-gray-600 mx-auto mb-3 group-hover:text-[#00D9FF] transition-colors" />
+                    <h4 className="text-lg text-white mb-2">{project.title}</h4>
+                    <p className="text-gray-500 group-hover:text-gray-400 transition-colors text-sm leading-relaxed">
+                      {project.description}
+                    </p>
+                  </div>
+                </div>
+                <div className="p-4 border-t border-[#00D9FF]/10">
+                  {project.techStack.length > 0 && (
+                    <div className="flex flex-wrap gap-1 mb-3">
+                      {project.techStack.map((tech) => (
+                        <Badge
+                          key={tech}
+                          variant="outline"
+                          className="text-xs border-[#00D9FF]/30 text-[#00D9FF]"
+                        >
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
+                  )}
+                  {project.link && (
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="w-full border-[#00D9FF] text-[#00D9FF] hover:bg-[#00D9FF] hover:text-[#0A1628]"
+                      onClick={() => window.open(project.link, "_blank")}
+                    >
+                      <ExternalLink className="w-3 h-3 mr-2" />
+                      View Project
+                    </Button>
+                  )}
                 </div>
               </div>
             ))}

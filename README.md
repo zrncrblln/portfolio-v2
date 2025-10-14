@@ -14,6 +14,7 @@ A modern, responsive portfolio website built with React, TypeScript, and Tailwin
 - **Modern UI**: Built with Radix UI components and Tailwind CSS
 - **TypeScript**: Type-safe development for better code quality
 - **Fast Performance**: Optimized build with Vite for lightning-fast loading
+- **Error Handling**: Includes error boundaries and console logging for stable live deployments
 
 ## 🛠️ Tech Stack
 
@@ -92,6 +93,9 @@ portfolio-v2/
 4. **Open your browser**
    Navigate to `http://localhost:3000` to view the portfolio
 
+5. **Test locally**
+   Run `npm run preview` to ensure everything works correctly before deploying
+
 ## 📜 Available Scripts
 
 - `npm run dev` - Start development server
@@ -112,6 +116,20 @@ The project is configured for automatic deployment to GitHub Pages:
 - **Base Path**: Configured for GitHub Pages subdirectory (`/portfolio-v2/`)
 - **Build Output**: Generated in `dist/` directory
 - **CI/CD**: GitHub Actions workflow handles automated builds and deployments
+
+After deployment, monitor browser console logs and check for errors to ensure stability.
+
+## 🔧 Troubleshooting
+
+### Blank Page in Live Deployment
+
+If the live site shows a blank page:
+
+1. Check browser console for JavaScript errors
+2. Ensure error boundaries are in place (added in `src/App.tsx`)
+3. Verify console logging in `src/main.tsx` for script execution
+4. Rebuild and redeploy: `npm run build && npm run deploy`
+5. Test locally with `npm run preview` before deploying
 
 ## 🎨 Customization
 
