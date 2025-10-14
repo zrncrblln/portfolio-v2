@@ -1,5 +1,4 @@
-import { motion } from "motion/react";
-import { useInView } from "motion/react";
+import { motion, useInView } from "motion/react";
 import { useRef, useState } from "react";
 import {
   ExternalLink,
