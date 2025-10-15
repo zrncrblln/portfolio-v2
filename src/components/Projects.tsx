@@ -42,6 +42,9 @@ export function Projects() {
     "JavaScript",
     "Bootstrap 5",
     "Tailwind CSS",
+    "jQuery",
+    "GitHub",
+    "Git",
   ];
 
   return (
@@ -276,12 +279,14 @@ export function Projects() {
                   "CSS3",
                   "JavaScript",
                   "Bootstrap 5",
+                  "GitHub",
+                  "Git",
                 ],
                 link: "https://github.com/zrncrblln/automate",
               },
               {
                 id: 2,
-                title: "Moviez - Netflix-Inspired Streaming Platform",
+                title: "Moviez - Film Library",
                 description:
                   "A modern streaming platform interface inspired by Netflix, built with React, TypeScript, and Vite.",
                 icon: Film,
@@ -292,6 +297,8 @@ export function Projects() {
                   "React Router",
                   "CSS3",
                   "TMDB API",
+                  "GitHub",
+                  "Git",
                 ],
                 link: "https://github.com/zrncrblln/film-library",
               },
@@ -308,6 +315,8 @@ export function Projects() {
                   "React Router",
                   "CSS3",
                   "Figma",
+                  "GitHub",
+                  "Git",
                 ],
                 link: "https://zrncrblln.github.io/cybersecurity-awareness-landing-page/",
               },
