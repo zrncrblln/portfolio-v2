@@ -49,8 +49,9 @@ export function Navigation() {
 
   const handleDownloadResume = () => {
     const link = document.createElement("a");
-    link.href = `/portfolio-v2/resume.pdf`;
-    link.download = "Corbillon_Zoren_Resume.pdf";
+    link.href = `${import.meta.env.BASE_URL}Corbillon, Zoren A. - Resume.pdf`;
+    link.download = "Corbillon, Zoren A. - Resume.pdf";
+    link.target = "_blank";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
