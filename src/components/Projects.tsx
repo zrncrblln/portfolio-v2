@@ -300,7 +300,7 @@ export function Projects() {
                   "GitHub",
                   "Git",
                 ],
-                link: "https://zrncrblln.github.io/film-library/",
+                link: "https://zrncrblln.github.io/film-library/index.html",
               },
               {
                 id: 3,
