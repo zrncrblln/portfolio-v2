@@ -20,8 +20,8 @@ export function Certifications() {
 
   const certifications = [
     {
-      title: "UI/UX Design Fundamentals",
-      organization: "Google",
+      title: "Ehical Hacking Essentials",
+      organization: "Cisco",
       date: "2024",
       icon: Shield,
       featured: true,

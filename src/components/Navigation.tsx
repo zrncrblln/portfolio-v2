@@ -51,7 +51,6 @@ export function Navigation() {
     const link = document.createElement("a");
     link.href = `${import.meta.env.BASE_URL}Corbillon, Zoren A. - Resume.pdf`;
     link.download = "Corbillon, Zoren A. - Resume.pdf";
-    link.target = "_blank";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
