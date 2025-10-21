@@ -1,1 +1,3 @@
-node_modules/.cache/gh-pages/https\!github.com\!zrncrblln\!portfolio-v2.git/
+node_modules/
+dist/
+.cache/gh-pages/https\!github.com\!zrncrblln\!portfolio-v2.git/
