@@ -14,6 +14,7 @@ export function Experience() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isEducationExpanded, setIsEducationExpanded] = useState(false);
 
   return (
     <section
@@ -240,11 +241,113 @@ export function Experience() {
                     <p className="text-sm text-gray-400 mt-2">2021-2025</p>
                   </div>
                 </div>
-                <p className="text-gray-300">
-                  Specialized in web development, UI/UX design, and data
-                  management. Built a strong foundation in software engineering
-                  principles and system architecture.
+                <p className="text-gray-300 mb-4">
+                  Completed a comprehensive Computer Engineering program
+                  covering programming, software development, electronics,
+                  computer architecture, networks, and embedded systems —
+                  building a strong foundation in both hardware and software
+                  aspects of technology.
                 </p>
+
+                {/* Expandable Achievements */}
+                <button
+                  onClick={() => setIsEducationExpanded(!isEducationExpanded)}
+                  className="flex items-center gap-2 text-[#00FF88] hover:text-[#00D9FF] transition-colors mb-4"
+                >
+                  <span>Key Achievements</span>
+                  {isEducationExpanded ? (
+                    <ChevronUp className="w-4 h-4" />
+                  ) : (
+                    <ChevronDown className="w-4 h-4" />
+                  )}
+                </button>
+
+                <motion.div
+                  initial={false}
+                  animate={{
+                    height: isEducationExpanded ? "auto" : 0,
+                    opacity: isEducationExpanded ? 1 : 0,
+                  }}
+                  transition={{ duration: 0.3 }}
+                  className="overflow-hidden"
+                >
+                  <div className="space-y-3 mb-6">
+                    <div className="flex items-start gap-3 p-3 bg-[#0A1628] rounded-lg border border-[#00FF88]/10">
+                      <span className="text-2xl">📚</span>
+                      <div>
+                        <p className="text-white">1st Year</p>
+                        <p className="text-sm text-gray-400">
+                          <strong>1st Semester:</strong> Computer Engineering as
+                          a Discipline, Programming Logic and Design, Computer
+                          Hardware and Troubleshooting
+                          <br />
+                          <strong>2nd Semester:</strong> Object-Oriented
+                          Programming, Discrete Mathematics, Engineering Data
+                          Analysis, Engineering Data Analysis (Lab), Physics for
+                          Engineers, Physics for Engineers (Lab)
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3 p-3 bg-[#0A1628] rounded-lg border border-[#00D9FF]/10">
+                      <span className="text-2xl">⚙️</span>
+                      <div>
+                        <p className="text-white">2nd Year</p>
+                        <p className="text-sm text-gray-400">
+                          <strong>1st Semester:</strong> Fundamentals of
+                          Electrical Circuit (Lec), Fundamentals of Electrical
+                          Circuit (Lab), Computer-Aided Drafting, Data
+                          Structures and Algorithms, Differential Equations
+                          <br />
+                          <strong>2nd Semester:</strong> Fundamentals of
+                          Electronic Circuits (Lec), Fundamentals of Electronic
+                          Circuits (Lab), Software Design (Lec), Software Design
+                          (Lab), Operating Systems (Lec), Operating Systems
+                          (Lab), Numerical Methods, Network Technologies and
+                          Infrastructure
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3 p-3 bg-[#0A1628] rounded-lg border border-[#8B5CF6]/10">
+                      <span className="text-2xl">💻</span>
+                      <div>
+                        <p className="text-white">3rd Year</p>
+                        <p className="text-sm text-gray-400">
+                          <strong>1st Semester:</strong> Fundamentals of Mixed
+                          Signals and Sensors, Data and Digital Communications
+                          (Lec), Data and Digital Communications (Lab), Logic
+                          Circuit and Design, Logic Circuit and Design (Lab),
+                          Introduction to HDL (Hardware Description Language),
+                          Feedback and Control Systems, Computer Engineering
+                          Drafting and Design
+                          <br />
+                          <strong>2nd Semester:</strong> Computer Networks and
+                          Security (Lec), Computer Networks and Security (Lab),
+                          Microprocessors (Lec), Microprocessors (Lab), Digital
+                          Signal Processing (Lec), Digital Signal Processing
+                          (Lab), Software Development 1<br />
+                          <strong>Summer:</strong> On-the-Job Training (360
+                          Hours) (Tech-related experience)
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3 p-3 bg-[#0A1628] rounded-lg border border-[#00FF88]/10">
+                      <span className="text-2xl">🔩</span>
+                      <div>
+                        <p className="text-white">4th Year</p>
+                        <p className="text-sm text-gray-400">
+                          <strong>1st Semester:</strong> Embedded Systems (Lec),
+                          Embedded Systems (Lab), Computer Architecture and
+                          Organization (Lec), Computer Architecture and
+                          Organization (Lab), CPE Practice Design 1, Software
+                          Development 2<br />
+                          <strong>2nd Semester:</strong> Emerging Technologies
+                          in CPE (Lec), Emerging Technologies in CPE (Lab), CPE
+                          Practice Design 2, Software Development 3
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
               </div>
             </motion.div>
           </div>

@@ -115,42 +115,34 @@ export function About() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="space-y-6"
           >
-            <h3 className="text-3xl text-[#00D9FF]">
-              Building Secure, Scalable Solutions
-            </h3>
+            <div className="bg-black/20 backdrop-blur-lg border border-white/10 rounded-xl p-6">
+              <h3 className="text-3xl text-[#00D9FF] mb-8">
+                Building Secure, Scalable Solutions
+              </h3>
 
-            <div className="space-y-4 text-gray-300 leading-relaxed">
-              <p>
-                Fresh Computer Engineering graduate with a specialization in web
-                development and UI/UX design. I'm passionate about creating
-                robust, user-centric applications that solve real-world
-                problems.
-              </p>
-              <p>
-                During my internship at AKSI iSynergies, I contributed to
-                full-stack development projects, improving system reliability by
-                15% and enhancing data processing efficiency by 30%. My approach
-                combines technical expertise with a deep understanding of user
-                needs.
-              </p>
-              <p>
-                Based in Nueva Ecija, Philippines, I'm driven by curiosity and a
-                commitment to continuous learning. Whether it's optimizing
-                database queries or implementing security best practices, I
-                bring fresh perspectives with proven results.
-              </p>
-            </div>
+              <div className="space-y-4 text-gray-300 leading-relaxed mt-4">
+                <p className="mt-8 mb-6">
+                  As a Computer Engineering graduate, I specialized in full
+                  stack development, encompassing web development, UI/UX design,
+                  and data management during my college studies. Through
+                  comprehensive coursework and hands-on projects, I mastered
+                  software engineering principles and system architecture,
+                  developing the skills to create innovative and efficient
+                  solutions.
+                </p>
+              </div>
 
-            <div className="flex flex-wrap gap-3 pt-4">
-              <span className="px-4 py-2 rounded-full bg-[#1a1a2e] border border-[#00D9FF]/30 text-[#00D9FF]">
-                Web Development
-              </span>
-              <span className="px-4 py-2 rounded-full bg-[#1a1a2e] border border-[#00FF88]/30 text-[#00FF88]">
-                UI/UX Design
-              </span>
-              <span className="px-4 py-2 rounded-full bg-[#1a1a2e] border border-[#8B5CF6]/30 text-[#8B5CF6]">
-                Data Management
-              </span>
+              <div className="flex flex-wrap gap-3 pt-4">
+                <span className="px-4 py-2 rounded-full bg-[#1a1a2e] border border-[#00D9FF]/30 text-[#00D9FF]">
+                  Web Development
+                </span>
+                <span className="px-4 py-2 rounded-full bg-[#1a1a2e] border border-[#00FF88]/30 text-[#00FF88]">
+                  UI/UX Design
+                </span>
+                <span className="px-4 py-2 rounded-full bg-[#1a1a2e] border border-[#8B5CF6]/30 text-[#8B5CF6]">
+                  Data Management
+                </span>
+              </div>
             </div>
           </motion.div>
 

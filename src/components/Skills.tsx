@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { useInView } from "motion/react";
 import { useRef, useState } from "react";
-import { Server, Layout, Database, Palette } from "lucide-react";
+import { Server, Layout, Database, Palette, Code, Cpu } from "lucide-react";
 import { Badge } from "./ui/badge";
 
 export function Skills() {
@@ -31,13 +31,6 @@ export function Skills() {
       ],
     },
     {
-      id: "database",
-      title: "Database & Analytics",
-      icon: Database,
-      color: "#8B5CF6",
-      skills: ["MySQL", "SQL", "Data Analytics", "Excel", "Tableau"],
-    },
-    {
       id: "design",
       title: "UI/UX Design",
       icon: Palette,
@@ -50,6 +43,35 @@ export function Skills() {
         "Prototyping",
         "Design Systems",
       ],
+    },
+    {
+      id: "database",
+      title: "Database & Analytics",
+      icon: Database,
+      color: "#8B5CF6",
+      skills: ["MySQL", "SQL", "Data Analytics", "Excel", "Tableau"],
+    },
+    {
+      id: "programming",
+      title: "Programming Languages",
+      icon: Code,
+      color: "#00FF88",
+      skills: [
+        "Python",
+        "C++",
+        "Java",
+        "Assembly (ASM)",
+        "TypeScript",
+        "MATLAB",
+        "PowerShell",
+      ],
+    },
+    {
+      id: "hardware",
+      title: "Hardware & IoT",
+      icon: Cpu,
+      color: "#8B5CF6",
+      skills: ["Arduino Uno", "ESP32"],
     },
   ];
 
@@ -73,7 +95,7 @@ export function Skills() {
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {categories.map((category, index) => {
             const Icon = category.icon;
             const isActive = activeCategory === category.id;
