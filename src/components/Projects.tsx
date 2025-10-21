@@ -9,6 +9,7 @@ import {
   GraduationCap,
   Film,
   Shield,
+  Home,
 } from "lucide-react";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
@@ -17,6 +18,7 @@ export function Projects() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [isExpanded, setIsExpanded] = useState(false);
+  const [showMore, setShowMore] = useState(false);
 
   const metrics = [
     {
@@ -320,49 +322,88 @@ export function Projects() {
                 ],
                 link: "https://zrncrblln.github.io/cybersecurity-awareness-landing-page/",
               },
-            ].map((project) => (
-              <div
-                key={project.id}
-                className="rounded-xl bg-[#1a1a2e] border border-[#00D9FF]/10 hover:border-[#00D9FF]/30 transition-all group cursor-pointer overflow-hidden"
-              >
-                <div className="aspect-video flex items-center justify-center p-6">
-                  <div className="text-center">
-                    <project.icon className="w-12 h-12 text-gray-600 mx-auto mb-3 group-hover:text-[#00D9FF] transition-colors" />
-                    <h4 className="text-lg text-white mb-2">{project.title}</h4>
-                    <p className="text-gray-500 group-hover:text-gray-400 transition-colors text-sm leading-relaxed">
-                      {project.description}
-                    </p>
+              {
+                id: 4,
+                title: "Marci Metzger Real Estate Website",
+                description:
+                  "A modern, responsive real estate website for Marci Metzger, specializing in Pahrump, Nevada properties. Built with React, TypeScript, and Tailwind CSS.",
+                icon: Home,
+                techStack: [
+                  "React",
+                  "TypeScript",
+                  "Vite",
+                  "Tailwind CSS",
+                  "Shadcn/ui",
+                  "Lucide React",
+                  "React Router DOM",
+                  "React Query",
+                  "React Hook Form",
+                  "Zod",
+                ],
+                link: "https://zrncrblln.github.io/marcimetzger/",
+              },
+            ]
+              .slice(0, showMore ? 4 : 3)
+              .map((project) => (
+                <div
+                  key={project.id}
+                  className="rounded-xl bg-[#1a1a2e] border border-[#00D9FF]/10 hover:border-[#00D9FF]/30 transition-all group cursor-pointer overflow-hidden"
+                >
+                  <div className="aspect-video flex items-center justify-center p-6">
+                    <div className="text-center">
+                      <project.icon className="w-12 h-12 text-gray-600 mx-auto mb-3 group-hover:text-[#00D9FF] transition-colors" />
+                      <h4 className="text-lg text-white mb-2">
+                        {project.title}
+                      </h4>
+                      <p className="text-gray-500 group-hover:text-gray-400 transition-colors text-sm leading-relaxed">
+                        {project.description}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="p-4 border-t border-[#00D9FF]/10">
+                    {project.techStack.length > 0 && (
+                      <div className="flex flex-wrap gap-1 mb-3">
+                        {project.techStack.map((tech) => (
+                          <Badge
+                            key={tech}
+                            variant="outline"
+                            className="text-xs border-[#00D9FF]/30 text-[#00D9FF]"
+                          >
+                            {tech}
+                          </Badge>
+                        ))}
+                      </div>
+                    )}
+                    {project.link && (
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="w-full border-[#00D9FF] text-[#00D9FF] hover:bg-[#00D9FF] hover:text-[#0A1628]"
+                        onClick={() => window.open(project.link, "_blank")}
+                      >
+                        <ExternalLink className="w-3 h-3 mr-2" />
+                        View Project
+                      </Button>
+                    )}
                   </div>
                 </div>
-                <div className="p-4 border-t border-[#00D9FF]/10">
-                  {project.techStack.length > 0 && (
-                    <div className="flex flex-wrap gap-1 mb-3">
-                      {project.techStack.map((tech) => (
-                        <Badge
-                          key={tech}
-                          variant="outline"
-                          className="text-xs border-[#00D9FF]/30 text-[#00D9FF]"
-                        >
-                          {tech}
-                        </Badge>
-                      ))}
-                    </div>
-                  )}
-                  {project.link && (
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="w-full border-[#00D9FF] text-[#00D9FF] hover:bg-[#00D9FF] hover:text-[#0A1628]"
-                      onClick={() => window.open(project.link, "_blank")}
-                    >
-                      <ExternalLink className="w-3 h-3 mr-2" />
-                      View Project
-                    </Button>
-                  )}
-                </div>
-              </div>
-            ))}
+              ))}
           </div>
+
+          {/* See More Projects Button - Centered on Screen */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="flex justify-center mt-16"
+          >
+            <button
+              onClick={() => setShowMore(!showMore)}
+              className="px-6 py-3 rounded-lg bg-[#1a1a2e] border border-[#00D9FF]/30 text-[#00D9FF] hover:bg-[#00D9FF]/10 hover:border-[#00D9FF] transition-all"
+            >
+              {showMore ? "Show Less" : "See More Projects"}
+            </button>
+          </motion.div>
         </motion.div>
       </div>
     </section>

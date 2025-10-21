@@ -20,6 +20,24 @@ export function Certifications() {
 
   const certifications = [
     {
+      title: "Certified Data Center Technician (CDCT)",
+      organization: "East West International Educational Specialists, Inc.",
+      date: "Nov 2024",
+      icon: Database,
+      featured: true,
+      color: "#8B5CF6",
+      category: "Infrastructure",
+    },
+    {
+      title: "Certified Ethical Hacker (CEH)",
+      organization: "Cisco",
+      date: "Nov 2024",
+      icon: Shield,
+      featured: true,
+      color: "#00D9FF",
+      category: "Cybersecurity",
+    },
+    {
       title: "Certificate – Marketing ME Live (Career Session)",
       organization: "Jobs180.com, Inc.",
       date: "May 2025",
@@ -45,24 +63,6 @@ export function Certifications() {
       featured: false,
       color: "#8B5CF6",
       category: "Business",
-    },
-    {
-      title: "Certified Data Center Technician (CDCT)",
-      organization: "East West International Educational Specialists, Inc.",
-      date: "Nov 2024",
-      icon: Database,
-      featured: true,
-      color: "#8B5CF6",
-      category: "Infrastructure",
-    },
-    {
-      title: "Certified Ethical Hacker (CEH)",
-      organization: "Cisco",
-      date: "Nov 2024",
-      icon: Shield,
-      featured: true,
-      color: "#00D9FF",
-      category: "Cybersecurity",
     },
     {
       title: "Python Essentials 1",
@@ -113,7 +113,7 @@ export function Certifications() {
 
   const visibleCertifications = showAll
     ? certifications
-    : certifications.slice(0, 6);
+    : certifications.slice(0, 8);
 
   return (
     <section
@@ -241,7 +241,7 @@ export function Certifications() {
         </div>
 
         {/* Show More/Less Button */}
-        {certifications.length > 6 && (
+        {certifications.length > 8 && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : { opacity: 0 }}
