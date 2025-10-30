@@ -346,7 +346,7 @@ export function Projects() {
                 id: 5,
                 title: "WU-P Pocket Guide 📱",
                 description:
-                  "The WU-P Pocket Guide is a comprehensive Progressive Web App (PWA) designed to enhance the campus experience for students, faculty, and visitors of Wesleyan University-Philippines (WU-P). It serves as a centralized hub for university information, combining real-time announcements, interactive navigation, educational guides, emergency alerts, and an AI-powered chatbot into a single, user-friendly platform.",
+                  "The WU-P Pocket Guide is a campus companion app offering updates, navigation, resources, alerts, and an AI chatbot.",
                 icon: GraduationCap,
                 techStack: [
                   "Laravel",
