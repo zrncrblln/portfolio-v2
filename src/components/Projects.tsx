@@ -342,8 +342,28 @@ export function Projects() {
                 ],
                 link: "https://zrncrblln.github.io/marcimetzger/",
               },
+              {
+                id: 5,
+                title: "WU-P Pocket Guide 📱",
+                description:
+                  "The WU-P Pocket Guide is a comprehensive Progressive Web App (PWA) designed to enhance the campus experience for students, faculty, and visitors of Wesleyan University-Philippines (WU-P). It serves as a centralized hub for university information, combining real-time announcements, interactive navigation, educational guides, emergency alerts, and an AI-powered chatbot into a single, user-friendly platform.",
+                icon: GraduationCap,
+                techStack: [
+                  "Laravel",
+                  "PHP",
+                  "MySQL",
+                  "Tailwind CSS",
+                  "Alpine.js",
+                  "Leaflet.js",
+                  "OpenAI API",
+                  "Facebook Graph API",
+                  "OneSignal",
+                  "Vite",
+                ],
+                link: "https://github.com/zrncrblln/wup-pocket-guide",
+              },
             ]
-              .slice(0, showMore ? 4 : 3)
+              .slice(0, showMore ? 5 : 3)
               .map((project) => (
                 <div
                   key={project.id}
