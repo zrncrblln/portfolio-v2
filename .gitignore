@@ -1,3 +1,3 @@
 node_modules/
-dist/
+# dist/  # Uncommented to allow committing dist for GitHub Pages
 .cache/gh-pages/https\!github.com\!zrncrblln\!portfolio-v2.git/
