@@ -95,7 +95,7 @@ export function Skills() {
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {categories.map((category, index) => {
             const Icon = category.icon;
             const isActive = activeCategory === category.id;
@@ -111,10 +111,10 @@ export function Skills() {
                 whileHover={{ scale: 1.02 }}
                 onHoverStart={() => setActiveCategory(category.id)}
                 onHoverEnd={() => setActiveCategory(null)}
-                className="relative group cursor-pointer"
+                className="relative group cursor-pointer h-[320px]"
               >
                 <div
-                  className={`p-6 rounded-xl bg-[#1a1a2e] border transition-all duration-200 min-h-[320px] ${
+                  className={`p-6 rounded-xl bg-[#1a1a2e] border transition-all duration-200 flex flex-col h-full ${
                     isActive
                       ? "border-opacity-100 shadow-2xl"
                       : "border-opacity-20 hover:border-opacity-50"
@@ -157,7 +157,7 @@ export function Skills() {
                   </h3>
 
                   {/* Skills List as Badges */}
-                  <div className="flex flex-wrap gap-2 justify-center">
+                  <div className="flex-grow flex flex-wrap gap-2 justify-center overflow-y-auto">
                     {category.skills.map((skill, skillIndex) => (
                       <motion.div
                         key={skill}
