@@ -290,7 +290,7 @@ export function Projects() {
                 id: 2,
                 title: "Moviez - Film Library",
                 description:
-                  "A modern streaming platform interface inspired by Netflix, built with React, TypeScript, and Vite.",
+                  "A full-featured streaming platform interface built with React, TypeScript, and Vite, integrating TMDB API for real-time movie data and content management.",
                 icon: Film,
                 techStack: [
                   "React",
@@ -306,9 +306,9 @@ export function Projects() {
               },
               {
                 id: 3,
-                title: "Cybersecurity Awareness Landing Page",
+                title: "Cybersecurity Awareness",
                 description:
-                  "A landing page designed to raise awareness about cybersecurity best practices, built with React.",
+                  "A landing page designed to raise awareness about cybersecurity best practices and online safety, built with React.",
                 icon: Shield,
                 techStack: [
                   "React",
@@ -326,7 +326,7 @@ export function Projects() {
                 id: 4,
                 title: "Marci Metzger Real Estate Website",
                 description:
-                  "A modern, responsive real estate website for Marci Metzger, specializing in Pahrump, Nevada properties. Built with React, TypeScript, and Tailwind CSS.",
+                  "A professional real estate platform showcasing Pahrump properties, with advanced search functionality and mobile-responsive design.",
                 icon: Home,
                 techStack: [
                   "React",
@@ -347,9 +347,9 @@ export function Projects() {
               .map((project) => (
                 <div
                   key={project.id}
-                  className="rounded-xl bg-[#1a1a2e] border border-[#00D9FF]/10 hover:border-[#00D9FF]/30 transition-all group cursor-pointer overflow-hidden"
+                  className="rounded-xl bg-[#1a1a2e] border border-[#00D9FF]/10 hover:border-[#00D9FF]/30 transition-all group cursor-pointer overflow-hidden h-[400px] flex flex-col"
                 >
-                  <div className="aspect-video flex items-center justify-center p-6">
+                  <div className="h-[240px] flex items-center justify-center p-6 flex-shrink-0">
                     <div className="text-center">
                       <project.icon className="w-12 h-12 text-gray-600 mx-auto mb-3 group-hover:text-[#00D9FF] transition-colors" />
                       <h4 className="text-lg text-white mb-2">
@@ -360,25 +360,27 @@ export function Projects() {
                       </p>
                     </div>
                   </div>
-                  <div className="p-4 border-t border-[#00D9FF]/10">
-                    {project.techStack.length > 0 && (
-                      <div className="flex flex-wrap gap-1 mb-3">
-                        {project.techStack.map((tech) => (
-                          <Badge
-                            key={tech}
-                            variant="outline"
-                            className="text-xs border-[#00D9FF]/30 text-[#00D9FF]"
-                          >
-                            {tech}
-                          </Badge>
-                        ))}
-                      </div>
-                    )}
+                  <div className="p-4 border-t border-[#00D9FF]/10 flex flex-col h-[160px]">
+                    <div className="flex-grow">
+                      {project.techStack.length > 0 && (
+                        <div className="flex flex-wrap gap-1 mb-3">
+                          {project.techStack.map((tech) => (
+                            <Badge
+                              key={tech}
+                              variant="outline"
+                              className="text-xs border-[#00D9FF]/30 text-[#00D9FF]"
+                            >
+                              {tech}
+                            </Badge>
+                          ))}
+                        </div>
+                      )}
+                    </div>
                     {project.link && (
                       <Button
                         variant="outline"
                         size="sm"
-                        className="w-full border-[#00D9FF] text-[#00D9FF] hover:bg-[#00D9FF] hover:text-[#0A1628]"
+                        className="w-full border-[#00D9FF] text-[#00D9FF] hover:bg-[#00D9FF] hover:text-[#0A1628] mt-auto"
                         onClick={() => window.open(project.link, "_blank")}
                       >
                         <ExternalLink className="w-3 h-3 mr-2" />
