@@ -63,5 +63,5 @@ export default defineConfig({
     port: 3000,
     open: true,
   },
-  base: process.env.NODE_ENV === "production" ? "/portfolio-v2/" : "/",
+  base: "./", // Relative path works for GitHub Pages
 });
